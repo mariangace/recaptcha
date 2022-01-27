@@ -7,7 +7,9 @@ function Login() {
     <div>
       Here we have some login options
       <div>
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.RECATCHA_KEY}>
+        <GoogleReCaptchaProvider
+          reCaptchaKey={process.env.REACT_APP_RECATCHA_KEY}
+        >
           <ReCaptchaComponent />
         </GoogleReCaptchaProvider>
       </div>

@@ -6,13 +6,14 @@ const ReCaptchaComponent = () => {
 
   // Create an event handler so you can call the verification on button click event or form submit
   const handleReCaptchaVerify = React.useCallback(async () => {
-    // if (!executeRecaptcha) {
-    //   console.log("Execute recaptcha not yet available");
-    //   return;
-    // }
+    if (!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+      return;
+    }
 
     const token = await executeRecaptcha("yourAction");
     // Do whatever you want with the token
+    //send it to backend
     console.log(token);
   }, [executeRecaptcha]);
 
